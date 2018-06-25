@@ -34,7 +34,31 @@ and open the template in the editor.
   -o-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
   transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
 }
-.button secure {
+.buttonsecure {
+      display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 150px;
+  height: 42px;
+  cursor: pointer;
+  padding: 0 20px;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 11px;
+  border-radius: 11px;
+  font: normal 12px/normal "Antic", Helvetica, sans-serif;
+  color: rgba(140,140,140,1);
+  text-decoration: normal;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(40,40,40,0.4);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5) inset;
+  box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5) inset;
+  -webkit-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -moz-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -o-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
     -webkit-text-security: disc;
 }
 html, body {

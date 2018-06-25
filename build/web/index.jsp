@@ -28,7 +28,7 @@ and open the template in the editor.
                 <div class ="center">
                     <table class="register">
                         <tr><td><input class="button" name="user" placeholder="Enter username ..."></td></tr>
-                        <tr><td><input class="button secure" name="pass" placeholder="Enter password"></td></tr>
+                        <tr><td><input class="buttonsecure" name="pass" placeholder="Enter password"></td></tr>
                         <input type="submit" name="update" value=" Apply " 
                             style="position: absolute; height: 0px; width: 0px; border: none; padding: 0px;"
                              hidefocus="true" tabindex="-1"/>
