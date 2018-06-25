@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<students xmlns="http://www.sawickers.com"
+<users xmlns="http://www.sawickers.com"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://www.sawickers.com users.xsd">
-    <student>        
-        <name>Test Student</name>
-        <email>student@tutoring.com</email>
+    <user>        
+        <name>Test</name>
+        <email>user@user.com</email>
         <password>testpassword</password>
         <registered>15-02-2015</registered>
-    </student>
-</students>
+    </user>
+</users>
