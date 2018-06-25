@@ -1,3 +1,4 @@
+<%@page import="storage.*"%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -10,7 +11,12 @@ and open the template in the editor.
         <%
             String user = request.getParameter("user");
             String pass = request.getParameter("pass");
+            String path = application.getRealPath("WEB-INF/users.xml");
         %>
+        <jsp:useBean id="usersApplication" class = "storage.usersApplication" scope ="application">
+        <jsp:setProperty name ="usersApplication" property="filePath" value ="<%=path%>"/> 
+        </jsp:useBean>
+        <%users users = usersApplication.getUsers();%>
     <head>
         <title>Login</title>
         <meta charset="UTF-8">
