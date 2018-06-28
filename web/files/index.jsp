@@ -21,6 +21,14 @@ and open the template in the editor.
         <jsp:useBean id="usersApplication" class = "storage.usersApplication" scope ="application">
         <jsp:setProperty name ="usersApplication" property="filePath" value ="<%=path%>"/> 
         </jsp:useBean>
+        <style type="text/css">
+            body {
+                background-image: url('/media/bkg-blu.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+
         <%  
             usersApplication.setFilePath(path);
             users users = usersApplication.getUsers();
@@ -28,13 +36,15 @@ and open the template in the editor.
             if (session.getAttribute("user") != null) {
                 if (user != null) { 
                     %><jsp:include page='../WEB-INF/list.html' flush="true"/>
-                      <img src="../media/summary.png" alt="This shit ain't free"><%
+                      
+                      <img src="../media/summary.png" alt="This shit ain't free">
+                      <p id="p2">Source code for this web server is hosted on <a href ="https://github.com/sawicky/sawickyapp">Github</a></p><%
                 }
             } else  {   %>
                         <p id="p2">You're not logged in</p><br>
                     <%}%>
 
-    <body>
+    <body id="filesbody">
        
     </body>
 </html>
