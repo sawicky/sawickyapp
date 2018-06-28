@@ -4,84 +4,42 @@
  * and open the template in the editor.
  */
 package storage;
+import java.util.*;
 import java.io.Serializable;
 import javax.xml.bind.annotation.*;
-
 /**
  *
  * @author sawicky
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-public class users implements Serializable {
-    @XmlElement(name = "name")
-    private String name;
-    @XmlElement(name = "email")
-    private String email;    
-    @XmlElement(name = "password")
-    private String password;
-    @XmlElement(name = "registered")
-    private String registered;
-    
-    public users() {
-        super();
+@XmlRootElement(name="users", namespace="http://www.sawickers.com")
+public class users implements Serializable{
+    @XmlElement(name = "user")
+    private ArrayList<user> list = new ArrayList<user>();
+ 
+    public ArrayList<user> getList() {
+        return list;
     }
-    public users(String name, String email, String password, String registered) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.registered = registered;
+    public void addUser(user user) {
+        list.add(user);
     }
-
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
+    public void removeUser(user user) {
+        list.remove(user);
     }
-
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
+    public user login(String username, String password) {
+        // For each user in the list...
+        for (user user : list) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password))
+                return user; // Login correct. Return this user.
+        }
+        return null; // Login incorrect. Return null.
     }
-
-    /**
-     * @return the email
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * @param email the email to set
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * @return the password
-     */
-    public String getPassword() {
-        return password;
-    }
-
-    /**
-     * @param password the password to set
-     */
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    /**
-     * @return the registered
-     */
-    public String getRegistered() {
-        return registered;
-    }
-
-    public void setRegistered(String registered) {
-        this.registered = registered;
+    public user getUser(String username) {
+        // For each user in the list...
+        for (user user : list) {
+            if (user.getUsername().equals(username) )
+                return user; // Login correct. Return this user.
+        }
+        return null; // Login incorrect. Return null.
     }
 }

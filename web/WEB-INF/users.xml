@@ -3,8 +3,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://www.sawickers.com users.xsd">
     <user>        
-        <name>Test</name>
-        <email>user@user.com</email>
+        <username>sawicky</username>
         <password>testpassword</password>
         <registered>15-02-2015</registered>
     </user>
